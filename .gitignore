@@ -9,6 +9,7 @@
 
 *.class
 out/
+build/
 #.idea/
 
 #vilagtalan_virologusok.iml
