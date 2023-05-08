@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <build>
+        <!--
+            Itt adom meg a könyvtárakat
+            sourceDirectory: A .java forrásfájlok helye
+            testSourceDirectory: A tesztosztályok helye
+            outputDirectory: A mappa, ahová a fordított állományok kerülnek
+            directory: Mappa a Maven által generált fájlok számára
+         -->
+        <sourceDirectory>src</sourceDirectory>
+        <testSourceDirectory>test</testSourceDirectory>
+        <outputDirectory>build</outputDirectory>
+        <directory>${jarOutputDirectory}/maven</directory>
+
+        <!-- A generált jar fájl végső neve -->
+        <finalName>${gameName}</finalName>
+
+        <!--
+            Erőforrások, melyek a build folyamat során a .class fájlok mellé kerülnek,
+            abba a mappába, melyet a 'outputDirectory' jelöl
+         -->
+        <resources>
+            <resource>
+                <directory>${project.basedir}</directory>
+                <includes>
+                    <include>map.json</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>${project.basedir}/assets</directory>
+                <filtering>false</filtering>
+                <targetPath>assets</targetPath>
+            </resource>
+        </resources>
+
+        <!-- Pluginok, melyek a különféle folyamatok során működnek -->
+        <plugins>
+            <!--
+                maven-resources-plugin
+                    Az <execution> blokkokban megadott fájlokat a leírt módon másolja egyik helyről a másikba
+            -->
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <!-- Az egész /assets/ mappa átmásolása a JAR fájl mellé -->
+                        <id>copy-resources</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${finalFolder}/assets</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.outputDirectory}/assets</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <!-- A 'map.json' fájl másolása a JAR mellé -->
+                        <phase>package</phase>
+                        <goals><goal>copy-resources</goal></goals>
+                        <configuration>
+                            <outputDirectory>${finalFolder}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.outputDirectory}</directory>
+                                    <includes>
+                                        <include>map.json</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--
+                maven-assembly-plugin:
+                    Mivel a programnak függősége van, azt el kell helyezni a JAR fájlon belül.
+                    Ha ez a plugin nem lenne, nem látná az alkalmazás a JSON Parser osztályokat.
+                    A létrehozott JAR fájlt egészíti ki és hoz létre egy újat
+             -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>jar-with-dependencies</id>
+                        <goals><goal>single</goal></goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <descriptorRefs>
+                                <descriptorRef>jar-with-dependencies</descriptorRef>
+                            </descriptorRefs>
+                            <finalName>${gameName}</finalName>
+                            <!-- Ne tegye a végére, hogy 'jar-with-dependencies' -->
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <outputDirectory>${finalFolder}</outputDirectory>
+                            <archive>
+                                <manifest>
+                                    <mainClass>main.Main</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Plugin, ami konkrét JAR fájlt hoz létre, függőségek nélkül, csak a programból magából -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>main.Main</mainClass>
+                        </manifest>
+                    </archive>
+                    <outputDirectory>${jarOutputDirectory}</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <packaging>jar</packaging>
+
+    <groupId>main</groupId>
+    <artifactId>vilagtalan_virologusok</artifactId>
+    <version>1.0</version>
+
+    <!-- Változók -->
+    <properties>
+        <!-- Használt Java verzió -->
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
+        <jarOutputDirectory>${project.basedir}/out/</jarOutputDirectory>
+        <finalFolder>${jarOutputDirectory}/final/</finalFolder>
+        <gameName>VilagtalanVirologusok</gameName>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+    </dependencies>
+</project>
