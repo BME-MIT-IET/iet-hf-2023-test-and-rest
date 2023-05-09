@@ -37,6 +37,7 @@
                 <targetPath>assets</targetPath>
             </resource>
         </resources>
+             
 
         <!-- Pluginok, melyek a különféle folyamatok során működnek -->
         <plugins>
@@ -141,6 +142,8 @@
 
     <!-- Változók -->
     <properties>
+         <sonar.organization>bmetestandrest</sonar.organization>
+         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <!-- Használt Java verzió -->
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
