@@ -40,6 +40,8 @@ public class Game {
     //private static List<Scientist> scientists;
     //private static List<Field> fields;
     private static int numGeneticCodes;
+
+    public static Random random = new Random();
     public static GAME_STATE state;
 
     public static int round;
@@ -262,8 +264,6 @@ public class Game {
         state = GAME_STATE.ONGOING;
         while(state == GAME_STATE.ONGOING) {
             for (ScientistWrapper s : scientists) {
-                if (state != GAME_STATE.ONGOING)
-                    break;
                 current = s;
                 gp.update();
             }

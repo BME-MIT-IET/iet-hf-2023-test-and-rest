@@ -78,7 +78,7 @@ public class Scientist {
         }
         //A mozgásunk alapból random, tehát a medvevírus nem befolyásolja ezt a részét a programnak.
         field.remove(this);
-        Random rand = new Random();
+        Random rand = Game.random;
         nextField.get(rand.nextInt(nextField.size())).accept(this);
         Skeleton.printReturn("void");
     }
