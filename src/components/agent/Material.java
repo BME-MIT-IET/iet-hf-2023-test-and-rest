@@ -1,5 +1,6 @@
 package components.agent;
 
+import components.utils.Game;
 import controls.Skeleton;
 import java.util.Random;
 
@@ -18,6 +19,7 @@ public class Material {
      * Az anyagból tárolt mennyiség.
      */
     private int quantity;
+    private Random rand;
 
     /**
      * Konstruktor ami beállítja az attribútumokat
@@ -69,7 +71,7 @@ public class Material {
      */
     public int decreaseWithRandomValue(int maxValue){
         Skeleton.printCall("Material.decreaseWithRandomValue()");
-        Random rand = new Random();
+        Random rand = Game.random;
         Skeleton.printReturn("random value");
         return rand.nextInt(Math.max(maxValue,quantity));
     }

@@ -1,7 +1,6 @@
 package components.scientist;
 
 import components.agent.Agent;
-import components.agent.Bear;
 import components.gear.Gear;
 import static components.scientist.ActnLabel.*;
 import static java.lang.Math.max;
@@ -145,7 +144,7 @@ public class Inventory {
         int gcOldSize = knownGeneticCodes.size();
         // genetic code hozzáadása a listához
         for (GeneticCode tgc : knownGeneticCodes) {
-            if (tgc.equals(gc)) {
+            if (tgc.equalsGeneticCode(gc)) {
                 Skeleton.printReturn("false");
                 return false;
             }

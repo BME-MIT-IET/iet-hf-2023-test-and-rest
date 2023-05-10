@@ -25,7 +25,7 @@ public class GeneticCode {
     private Map<String,Material> craftMaterials;
 
     // temporary
-    public boolean equals(GeneticCode gc) {
+    public boolean equalsGeneticCode(GeneticCode gc) {
         return this.agent.equals(gc.agent);
     }
 

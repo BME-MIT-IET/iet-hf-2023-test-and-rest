@@ -1,6 +1,7 @@
 package components.gear;
 
 import components.scientist.ActnLabel;
+import components.utils.Game;
 import controls.Skeleton;
 
 import java.util.Random;
@@ -35,7 +36,7 @@ public class Coat extends Gear {
      */
     public ActnLabel actionMgmt(ActnLabel id) {
         if (id == ActnLabel.USED_ON) {
-            Random random = new Random();
+            Random random = Game.random;
             if (random.nextInt(100) < effectiveness) {
                 Skeleton.printReturn("NO_ACTN");
                 return ActnLabel.NO_ACTN;
