@@ -10,6 +10,7 @@
 *.class
 out/
 build/
+jacoco/
 #.idea/
 
 #vilagtalan_virologusok.iml
