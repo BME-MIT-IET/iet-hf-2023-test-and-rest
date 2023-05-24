@@ -27,6 +27,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 
+import java.security.SecureRandom;
 import java.util.*;
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class Game {
     //private static List<Field> fields;
     private static int numGeneticCodes;
 
-    public static Random random = new Random();
+    public static SecureRandom  random = new SecureRandom();
     public static GAME_STATE state;
 
     public static int round;

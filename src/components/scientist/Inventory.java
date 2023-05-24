@@ -10,6 +10,7 @@ import components.agent.GeneticCode;
 import components.agent.Material;
 import controls.Skeleton;
 
+import java.security.SecureRandom;
 import java.util.*;
 
 /**
@@ -248,7 +249,8 @@ public class Inventory {
         if (!gears.isEmpty()) {
             Skeleton.printCall("Inventory.getRandomGear()");
             Skeleton.printReturn("Gear");
-            int randIndex = (int)(Math.random() * (gears.size()-1));
+            SecureRandom random = new SecureRandom(); // Compliant for security-sensitive use cases
+            int randIndex = (int)(random.nextInt()  * (gears.size()-1));
             return gears.get(randIndex);
         }
         return null;
@@ -261,7 +263,8 @@ public class Inventory {
      */
     public Material getRandomMaterial() {
         String[] types = {"nucleotide", "aminoacid"};
-        int index = (int)Math.floor((Math.random() * 2));
+        SecureRandom random = new SecureRandom(); // Compliant for security-sensitive use cases
+        int index = (int)Math.floor((random.nextFloat() * 2));
         Skeleton.printCall("Inventory.getRandomMaterial()");
         Skeleton.printReturn("Nucleotide");
         Material m = materials.get(types[index]);
