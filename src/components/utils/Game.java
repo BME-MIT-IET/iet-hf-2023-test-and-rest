@@ -42,7 +42,7 @@ public class Game {
     //private static List<Field> fields;
     private static int numGeneticCodes;
 
-    public static SecureRandom  random = new SecureRandom();
+    public static final  SecureRandom  random = new SecureRandom();
     public static GAME_STATE state;
 
     public static int round;

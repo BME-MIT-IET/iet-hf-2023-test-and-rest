@@ -250,7 +250,7 @@ public class Inventory {
             Skeleton.printCall("Inventory.getRandomGear()");
             Skeleton.printReturn("Gear");
             SecureRandom random = new SecureRandom(); // Compliant for security-sensitive use cases
-            int randIndex = (int)(random.nextInt()  * (gears.size()-1));
+            int randIndex = (random.nextInt()  * (gears.size()-1));
             return gears.get(randIndex);
         }
         return null;
