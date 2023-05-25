@@ -76,7 +76,7 @@ public class Field {
         List<Field> emptyNeighbours = new ArrayList<>();
         List<Field> nbs = new ArrayList<>();
         for(String id : neighbours){
-            nbs.add(Game.findField(id));
+            nbs.add(Game.findFieldOrNewField(id));
         }
         //megkeressük azokat a szomszédokat, ahol van hely, és belerakjuk egy új listába, amit végül visszaadunk
         for (Field f:nbs){
