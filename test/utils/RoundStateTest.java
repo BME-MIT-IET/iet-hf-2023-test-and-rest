@@ -58,4 +58,22 @@ public class RoundStateTest {
         assertEquals(true, roundState.getRob());
     }
 
+    @Test
+    public void TestReset(){
+        RoundState roundState = new RoundState();
+        roundState.setCraft();
+        roundState.setRob();
+        roundState.setTouch();
+
+        assertEquals(true, roundState.getCraft());
+
+        //reset hatására minden újra false lesz
+        roundState.reset();
+        assertEquals(false, roundState.getCraft());
+        assertEquals(false, roundState.getRob());
+        assertEquals(false, roundState.getTouch());
+
+
+    }
+
 }

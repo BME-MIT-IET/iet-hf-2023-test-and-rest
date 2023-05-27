@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class GearTest {
 
     @Test
-    public void TestGetAndSetDuration(){
+    public void TestGetAndSetDelete(){
         Axe axe = new Axe();
         assertEquals(false, axe.getDelete());
 
