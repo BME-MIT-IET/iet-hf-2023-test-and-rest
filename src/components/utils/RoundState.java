@@ -89,4 +89,5 @@ public class RoundState {
         return touch;
     }
 
+    public boolean getUse() { return use;}
 }
