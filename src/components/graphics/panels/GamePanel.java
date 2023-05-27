@@ -2,14 +2,9 @@ package components.graphics.panels;
 
 import components.graphics.windows.DialogWindow;
 import components.graphics.wrappers.Wrapper;
-import components.utils.Game;
-import main.Main;
 
-import javax.sound.sampled.Line;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.List;
 
 public class GamePanel extends JPanel {
