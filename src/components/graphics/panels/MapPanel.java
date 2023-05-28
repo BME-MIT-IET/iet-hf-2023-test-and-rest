@@ -10,11 +10,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
+
 
 public class MapPanel extends JPanel {
     BufferedImage map;
+    private static final Logger LOGGER = Logger.getLogger(MapPanel.class.getName());
+
     /**
      * A pálya képének betöltése a mapPanelre
      */
@@ -22,7 +25,7 @@ public class MapPanel extends JPanel {
         try {
             map = ImageIO.read(new File("assets/maps/map1.png"));
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.severe("An error occurred while scanning the map\n");
         }
     }
 
