@@ -12,5 +12,5 @@ out/
 build/
 jacoco/
 #.idea/
-
+node_modules/
 #vilagtalan_virologusok.iml
