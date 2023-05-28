@@ -58,7 +58,7 @@ public abstract class Agent implements Steppable {
      */
     public void step() {
         Skeleton.printCall("Agent.step()");
-        if(duration>0 ) {
+        if(duration>0) {
             duration--;
         }
         Skeleton.printReturn("void");
