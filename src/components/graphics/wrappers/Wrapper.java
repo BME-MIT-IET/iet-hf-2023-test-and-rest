@@ -1,12 +1,15 @@
 package components.graphics.wrappers;
 
+import components.graphics.panels.MapPanel;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.logging.Logger;
 
 public abstract class Wrapper {
     protected BufferedImage texture;
-
+    private static final Logger LOGGER = Logger.getLogger(MapPanel.class.getName());
     private static final String pathPrefix = "assets/icons/";
 
     Wrapper(String s) {
@@ -14,7 +17,7 @@ public abstract class Wrapper {
         try {
             texture = ImageIO.read(new File(pathPrefix + s));
         } catch (Exception e) {
-            e.printStackTrace();
+            LOGGER.severe("An error occurred read the File\n");
         }
     }
 
