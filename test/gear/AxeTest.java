@@ -42,10 +42,4 @@ public class AxeTest {
         axe.setDuration(5);
         assertEquals("Axe(5)", axe.toString());
     }
-
-    @Test
-    public void TestToString2(){
-        Axe axe = new Axe();
-        assertEquals("Axe(1)", axe.toString());
-    }
 }

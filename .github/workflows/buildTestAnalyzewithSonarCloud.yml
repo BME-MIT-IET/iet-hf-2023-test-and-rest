@@ -39,6 +39,12 @@ jobs:
 
       - name: Build and test
         run: mvn -B test
+        
+      - name: Generate Jacoco report
+          run: mvn -B jacoco:report
+
+      - name: Copy Jacoco report to repository
+           run: cp target/site/jacoco/jacoco.xml ${{ github.workspace }}/jacoco/jacoco.xml
 
       - name: Add coverage to PR
         id: jacoco
