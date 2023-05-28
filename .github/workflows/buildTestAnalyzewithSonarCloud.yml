@@ -42,6 +42,7 @@ jobs:
 
       - name: Generate Jacoco report
         run: mvn -B jacoco:report
+        
 
       - name: Copy Jacoco report to repository
         run : cp target/site/jacoco/jacoco.xml ${{ github.workspace }}/jacoco/jacoco.xml
