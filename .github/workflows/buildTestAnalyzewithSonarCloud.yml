@@ -39,7 +39,7 @@ jobs:
 
       - name: Build and test
         run: mvn -B test
-        
+
       - name: Generate Jacoco report
           run: mvn -B jacoco:report
 
