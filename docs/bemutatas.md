@@ -1,7 +1,7 @@
 ## Házi feladat munkanapló: Csapatnév
 ### Integrációs és ellenőrzési technikák (VIMIAC04)
 
-**Csapattag 1** (Név, NEPTUN, GitHub)
+**Csapattag 1** (Dongó Rajmund, ZZXQJU, GitHub)
 *Részfeladat 1* (összesen kb. X óra):
 - Konkrét, projekt-specifikus feladat (X osztályhoz unit tesztek készítése)
 - ...
