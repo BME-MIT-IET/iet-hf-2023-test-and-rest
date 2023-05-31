@@ -1,7 +1,8 @@
-## Házi feladat munkanapló: Csapatnév
+## Házi feladat munkanapló: Test and REST
 ### Integrációs és ellenőrzési technikák (VIMIAC04)
 
 **Csapattag 1** (Dongó Rajmund, ZZXQJU, [rajmunddongo](https://github.com/rajmunddongo)) Összesen kb 13 óra
+
 *Statikus analízis elvégzése* (összesen kb. 5 óra):
 - Statikus analízis elvégzése (továbbiakban részletesen)
 - Sonarqube beállítása (gyakorlat előtt, ezért utánna is kellett nézni) 2 óra
