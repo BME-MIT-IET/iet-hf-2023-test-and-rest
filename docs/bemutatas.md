@@ -17,13 +17,13 @@
 - Pull request review-k 1 óra maximum
 - Bónusz: Segítettem a github actions beállításában itt a [komment](https://github.com/BME-MIT-IET/iet-hf-2023-test-and-rest/issues/3) hozzá
 
-**Csapattag 2** (Bidló András Rudolf, DRSREI, [GitHub](https://github.com/BAndriss)) Összesen kb 12 óra
+**Csapattag 2** (Bidló András Rudolf, DRSREI, [BAndriss](https://github.com/BAndriss)) Összesen kb 12 óra
 *Statikus analízis eszköz futtatása és jelzett hibák átnézése* (összesen kb. 4 óra):
 - Sonarqube által jelzett hibák javítása ([lásd](https://github.com/BME-MIT-IET/iet-hf-2023-test-and-rest/wiki/Documentation#statikus-anal%C3%ADzis)) 2 óra
 - Sonarqube tudja JUnit test covarage megjelníteni a Covarage fülön, mert jelenleg csak 0.0%-k mutatt hiába van teszt (Sajnos az általam talált ötletek nem vezettek eredményre, így ezt nem sikerült megcsinálnom, de ezen a [branchen](https://github.com/BME-MIT-IET/iet-hf-2023-test-and-rest/tree/sonar_code_covarage) próbálkoztam) 2 óra
 
 *Manuális tesztek* (összesen kb. 4 óra):
-- Manuális tesztek módjának kiderítése és egyeztettés @rajmunddongo-val, hogy hogyan kéne csinálni  3 óra
+- Manuális tesztek módjának kiderítése és egyeztettés [@rajmunddongo](https://github.com/rajmunddongo)-val, hogy hogyan kéne csinálni  3 óra
 - Manuális tesztek végzése ([lásd](https://github.com/BME-MIT-IET/iet-hf-2023-test-and-rest/wiki/Documentation#manu%C3%A1lis-tesztek)) 1 óra
 
 *Minden más* (összesen kb. 4 óra):
