@@ -50,7 +50,24 @@
 - Meeting a csapattal 2 óra
 - Pull request review-k 1 óra maximum
 
-**Csapattag 4** (Név, NEPTUN, GitHub)
+**Csapattag 4** (Gelencsér Ákos, RJSYLT, [gelencser09](https://github.com/gelencser09)) Összesen kb 10.5 óra
+
+*Code coverage, automated workflow* (összesen kb. 5 óra):
+- Code coverage könyvtárak keresése
+- JaCoCo részletes megismerése, reportok módja
+- Maven scripttel összekötés
+- Github Actions workflow bekötése 
+
+*Usability tesztek készítése* (összesen kb. 2.5 óra):
+- Előkészületek, usability tesztek módjának kiderítése 1 óra
+- Usability tesztek elkészítése [@adamkaj03](https://github.com/adamkaj03)-el és [@zotya0601](https://github.com/zotya0601)-val 1 óra
+- Usability teszthez tartozó dokumentáció elkészítése [@adamkaj03](https://github.com/adamkaj03)-el és [@zotya0601](https://github.com/zotya0601)-val 0.5 óra
+
+*Minden más* (összesen kb. 3 óra):
+- Meeting a csapattal 2 óra
+- Pull request review-k 1 óra maximum
+
+**Csapattag 5** (Név, NEPTUN, GitHub)
 *Részfeladat 1* (összesen kb. X óra):
 - Konkrét, projekt-specifikus feladat (X osztályhoz unit tesztek készítése)
 - ...
