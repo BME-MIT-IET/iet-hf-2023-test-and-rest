@@ -67,13 +67,21 @@
 - Meeting a csapattal 2 óra
 - Pull request review-k 1 óra maximum
 
-**Csapattag 5** (Név, NEPTUN, GitHub)
-*Részfeladat 1* (összesen kb. X óra):
-- Konkrét, projekt-specifikus feladat (X osztályhoz unit tesztek készítése)
-- ...
+**Csapattag 5** (Horváth Zoltán, ZFVE0X, [zotya0601](https://github.com/zotya0601)) - Összesen kb. 10 óra
+*Build rendszer választása* (összesen kb. 3,5 óra):
+- Ant, Maven és Gradle build systemek összehasonlítása, egyszerűség, projekthez szabhatóság és integrálhatóság szempontjából (1 óra)
+- Mélyebb megismerkedés a Maven buildrendszer működésével (2,5 óra)
 
-*Részfeladat 2* (összesen kb. X óra):
-- Konkrét, projekt-specifikus feladat (Z részfeladat ellenőrzése)
-- ...
+*Build rendszer konfigurálása* (összesen kb. 3,5 óra)
+- Maven telepítése, konfigurálása oly módon, hogy működése igazodjon a szoftverprojekt felépítéséhez (1 óra)
+- További igények felmérése (build mellett tesztek futtatása, futtatható JAR állomány generálása, függőségek kezelése) (0,5 óra)
+- Megfelelő Maven plugin-ok keresése és konfigurálása a szükséges feladatok ellátásához (asset mappa másolására, Fat JAR készítésére) (2 óra)
+
+*Build rendszer tesztelése* (összesen kb. fél óra)
+- Ellenőrzése annak, hogy azt az eredményt kapom-e, amit a követelmények szerint elvártam (0,5 óra)
+
+*Minden más* (összesen kb. 2,5 óra)
+- Meeting a csapattal  (2 óra)
+- Pull request review-ok (0,5 óra)
 
 2023. június 2.
