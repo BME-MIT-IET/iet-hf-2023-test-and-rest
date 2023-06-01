@@ -31,14 +31,22 @@
 - Meeting a csapattal 2 óra
 - Pull request review-k 1 óra maximum
 
-**Csapattag 3** (Név, NEPTUN, GitHub)
-*Részfeladat 1* (összesen kb. X óra):
-- Konkrét, projekt-specifikus feladat (X osztályhoz unit tesztek készítése)
-- ...
+**Csapattag 3** (Buzás Ádám, SMLZV2, [adamkaj03](https://github.com/adamkaj03)) Összesen kb 14 óra
+*Unit tesztek készítése* (összesen kb. 9 óra):
+- Projekt és a dokumentáció átnézése unit teszt előtt 1 óra
+- Unit tesztek készítése a játék logikáért felelős osztályaihoz 6 óra
+- Unit tesztek kimeneteinek ellenőrzése és a Maven telepítése saját gépre maximum 1 óra
+- Unit teszthez tartozó dokumentáció elkészítése 1 óra
 
-*Részfeladat 2* (összesen kb. X óra):
-- Konkrét, projekt-specifikus feladat (Z részfeladat ellenőrzése)
-- ...
+
+*Usability tesztek készítése* (összesen kb. 2 óra):
+- Usability tesztek módjának kiderítése 0.5 óra
+- Usability tesztek elkészítése [@gelencser09](https://github.com/gelencser09)-el és [@zotya0601](https://github.com/zotya0601)-val 1 óra
+- Usability teszthez tartozó dokumentáció elkészítése [@gelencser09](https://github.com/gelencser09)-el és [@zotya0601](https://github.com/zotya0601)-val 0.5 óra
+
+*Minden más* (összesen kb. 3 óra):
+- Meeting a csapattal 2 óra
+- Pull request review-k 1 óra maximum
 
 **Csapattag 4** (Név, NEPTUN, GitHub)
 *Részfeladat 1* (összesen kb. X óra):
@@ -49,4 +57,4 @@
 - Konkrét, projekt-specifikus feladat (Z részfeladat ellenőrzése)
 - ...
 
-2018. május 5.
+2023. június 2.
