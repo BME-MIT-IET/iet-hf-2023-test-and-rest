@@ -31,10 +31,10 @@
 - Meeting a csapattal 2 óra
 - Pull request review-k 1 óra maximum
 
-**Csapattag 3** (Buzás Ádám, SMLZV2, [adamkaj03](https://github.com/adamkaj03)) Összesen kb 14 óra
-*Unit tesztek készítése* (összesen kb. 9 óra):
+**Csapattag 3** (Buzás Ádám, SMLZV2, [adamkaj03](https://github.com/adamkaj03)) Összesen kb 13 óra
+*Unit tesztek készítése* (összesen kb. 8 óra):
 - Projekt és a dokumentáció átnézése unit teszt előtt 1 óra
-- Unit tesztek készítése a játék logikáért felelős osztályaihoz 6 óra
+- Unit tesztek készítése a játék logikáért felelős osztályaihoz 5 óra
 - Unit tesztek kimeneteinek ellenőrzése és a Maven telepítése saját gépre maximum 1 óra
 - Unit teszthez tartozó dokumentáció elkészítése 1 óra
 
